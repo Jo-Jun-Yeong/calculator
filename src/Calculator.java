@@ -10,10 +10,25 @@ public class Calculator {
 		int second = scanner.nextInt();
 		System.out.print("번째 입력 값:    ");
 		System.out.println(second);
-		
-		System.out.println("덧셈  "+(frist + second));
-		System.out.println("뺄셈  "+(frist - second));
-		System.out.println("곱셈  "+(frist * second));
-		System.out.println("나눗셈  "+(frist / second));
+
+		Scanner symbol = new Scanner(System.in);
+		String Symbol = scanner.next();
+		System.out.println("입력한 기호:    " + Symbol);
+		System.out.println(frist + Symbol + second);
+		if("+".equals(Symbol)) {
+			System.out.println(frist + second);
+		}
+		else if("-".equals(Symbol)) {
+			System.out.println(frist - second);
+		}
+		else if ("*".equals(Symbol)) {
+			System.out.println(frist * second);
+		}
+		else if("/".equals(Symbol)) {
+			System.out.println(frist / second);
+		}
+		else {
+			System.out.println("사칙연산에 해당되지 않는 입력입니다.");
+		}
 	}
 }
